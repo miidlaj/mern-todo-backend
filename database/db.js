@@ -7,7 +7,7 @@ const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
 export const Connection = () => {
-    const MONGODB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todo.pyzybdj.mongodb.net/?retryWrites=true&w=majority`;
+    const MONGODB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.ad1olmi.mongodb.net/?retryWrites=true&w=majority`;
 
     mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
     mongoose.connection.on('connected', ()=>{
